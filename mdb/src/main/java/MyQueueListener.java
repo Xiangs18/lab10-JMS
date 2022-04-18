@@ -28,7 +28,7 @@ public class MyQueueListener implements MessageListener {
     @Resource(mappedName = "jms/myConnectionFactory")
     private ConnectionFactory cf;
     // lookup the Queue using resource injection and assign to q
-    @Resource(mappedName = "jms/myQueue2")
+    @Resource(mappedName = "jms/myQueue3")
     private Queue q;
 
     /*
@@ -81,7 +81,8 @@ public class MyQueueListener implements MessageListener {
             // Send the message to the destination Queue
             writer.send(msg);
 
-            System.out.println("Sending message to QueueListener2");
+//            System.out.println("Sending message to QueueListener2");
+            System.out.println("Sending message to FetchResponseServet");
 
             // Close the connection
             con.close();
